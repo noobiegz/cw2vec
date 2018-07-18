@@ -32,6 +32,10 @@ conda install --file requirements.txt
 # 详细参数（如训练语料，超参数等）请参见 train.py
 CUDA_VISIBLE_DEVICES='' python -m train --cmd=train
 ```
+
+## 训练好的词向量（仍有提升空间）
+https://github.com/noobiegz/cw2vec/releases
+
 ## 可提升的地方
 
 - 运算速度
@@ -40,9 +44,9 @@ CUDA_VISIBLE_DEVICES='' python -m train --cmd=train
 
 ## 一个**不严谨**的比较
 
-受限于时间预算，并没有用相同的参数训练各个模型进行比较。下面的比较中：
+受限于时间预算，并没有用相同的参数、分词方式及语料训练各个模型进行比较。下面的比较中：
 - cw2vec: 使用本库 commit 8f789ed 训练，（其中包含详细参数），语料为中文维基百科，epochs=8
-- word2vec: 使用 gensim 的 word2vec 训练，语料为中文维基百科（与 cw2vec 非同一份），epochs=5
+- word2vec: 使用 gensim 的 word2vec 训练，语料为中文维基百科（与 cw2vec 非同一份，但接近），epochs=5
 - score: cosine 相似度
 
 与“森林”相似的词：
