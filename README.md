@@ -2,7 +2,7 @@
 
 cw2vec 是一种基于 skip-gram，并辅以笔画信息来训练中文词向量的模型，详见文章：https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/download/17444/16786
 
-**声明**：此实现非 cw2vec 的官方实现，所有观点皆非 cw2vec 官方观点。
+**声明**：此实现非 cw2vec 的官方实现，所有观点皆非 cw2vec 官方观点，如有错误请指正。
 
 此实现力求忠于原文，除了以下：
 
@@ -14,7 +14,7 @@ cw2vec 是一种基于 skip-gram，并辅以笔画信息来训练中文词向量
 ## 关于 commit 的数量
 此代码库只有为数不多的几个 commit，这是因为内部的代码库使用了 Git LFS，有许多大文件，所以使用了新的代码库。
 
-## 使用方法
+## 训练方法
 
 ```
 git clone https://github.com/noobiegz/cw2vec.git
@@ -44,7 +44,7 @@ https://github.com/noobiegz/cw2vec/releases
 
 ## 一个**不严谨**的比较
 
-受限于时间预算，并没有用相同的参数、分词方式及语料训练各个模型进行比较。下面的比较中：
+受限于时间预算，并没有用相同的参数、分词方式及语料训练各个模型来进行比较。下面的比较中：
 - cw2vec: 使用本库 commit 8f789ed 训练，（其中包含详细参数），语料为中文维基百科，epochs=8
 - word2vec: 使用 gensim 的 word2vec 训练，语料为中文维基百科（与 cw2vec 非同一份，但接近），epochs=5
 - score: cosine 相似度
