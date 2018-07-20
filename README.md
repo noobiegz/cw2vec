@@ -20,7 +20,7 @@ cw2vec 是一种基于 skip-gram，并辅以笔画信息来训练中文词向量
 git clone https://github.com/noobiegz/cw2vec.git
 cd cw2vec
 
-conda create -n cw2vec python==3.6
+conda create -n cw2vec python=3.6
 source activate cw2vec
 conda install --file requirements.txt
 
